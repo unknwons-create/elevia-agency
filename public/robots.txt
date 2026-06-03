@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://elevia-agence.com/sitemap.xml
+Sitemap: https://target-agency-llc.com/sitemap.xml

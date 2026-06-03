@@ -40,7 +40,7 @@ export default function Footer() {
         .ft { border-top: 1px solid rgba(255,255,255,.08); padding: 56px 24px 30px; background: rgba(7,11,22,.6); }
         .ft-in { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
         .ft-brand { max-width: 340px; }
-        .ft-brand img { height: 52px; width: auto; margin-bottom: 16px; }
+        .ft-brand img { height: 44px; width: auto; margin-bottom: 16px; }
         .ft-brand p { color: #aeb8d0; font-size: .9rem; line-height: 1.6; }
         .ft-cols { display: flex; gap: 60px; flex-wrap: wrap; }
         .ft-h { display: block; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;

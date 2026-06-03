@@ -108,7 +108,7 @@ export default function Nav() {
           border-color: rgba(255,255,255,.12); box-shadow: 0 10px 40px rgba(0,0,0,.45);
         }
         .nav-logo { display: flex; align-items: center; }
-        .nav-logo img { height: 50px; width: auto; }
+        .nav-logo img { height: 40px; width: auto; }
         .nav-links { display: flex; gap: 34px; list-style: none; align-items: center; }
         .nav-links a {
           color: #c3cce0; text-decoration: none; font-size: .92rem; font-weight: 500;
@@ -152,7 +152,7 @@ export default function Nav() {
         @media (max-width: 880px) {
           .nav-links, .nav-cta { display: none; }
           .nav-burger { display: flex; }
-          .nav-logo img { height: 46px; }
+          .nav-logo img { height: 36px; }
         }
       `}</style>
     </header>

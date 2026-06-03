@@ -1,17 +1,8 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { Rocket, Gem, Building2, BarChart, Target, Star } from "./icons";
-
-type IconKey = "rocket" | "gem" | "building" | "chart";
-const ICONS: Record<IconKey, (p: { size?: number }) => React.JSX.Element> = {
-  rocket: Rocket,
-  gem: Gem,
-  building: Building2,
-  chart: BarChart,
-};
 
 type Pack = {
-  icon: IconKey;
+  emoji: string;
   name: string;
   price: string;
   priceNote?: string;
@@ -27,7 +18,7 @@ type Pack = {
 
 const packs: Pack[] = [
   {
-    icon: "rocket",
+    emoji: "🚀",
     name: "Pack Starter",
     price: "170€",
     accent: "#22C55E",
@@ -44,7 +35,7 @@ const packs: Pack[] = [
     wa: "Bonjour Target 👋 Je suis intéressé(e) par le Pack Starter (170€). Pouvez-vous m'en dire plus ?",
   },
   {
-    icon: "gem",
+    emoji: "💎",
     name: "Pack Web Premium",
     price: "350€",
     priceNote: "ou sur devis",
@@ -69,7 +60,7 @@ const packs: Pack[] = [
     wa: "Bonjour Target 👋 Je suis intéressé(e) par le Pack Web Premium (350€). J'aimerais un devis et plus d'infos.",
   },
   {
-    icon: "building",
+    emoji: "🏛️",
     name: "Pack Site Vitrine",
     price: "dès 300€",
     priceNote: "ou sur devis",
@@ -89,7 +80,7 @@ const packs: Pack[] = [
     wa: "Bonjour Target 👋 Je suis intéressé(e) par le Pack Site Vitrine (à partir de 300€). Pouvez-vous me faire un devis ?",
   },
   {
-    icon: "chart",
+    emoji: "📊",
     name: "Pack Stratégie Marketing",
     price: "300€",
     priceNote: "prix fixe",
@@ -160,16 +151,12 @@ export default function Packs() {
     <section id="packs" className="packs" ref={ref}>
       <div className="sec-head">
         <span className="eyebrow font-label">Nos formules</span>
-        <h2 className="font-display sec-title-icon">
-          Choisissez votre pack <Target size={30} />
-        </h2>
+        <h2 className="font-display">Choisissez votre pack 🎯</h2>
         <p>Du lancement express à la stratégie complète — une formule pour chaque ambition.</p>
       </div>
 
       <div className="packs-grid">
-        {packs.map((p) => {
-          const Ico = ICONS[p.icon];
-          return (
+        {packs.map((p) => (
           <div
             key={p.name}
             className={`pack-card glass ${p.featured ? "featured" : ""}`}
@@ -180,8 +167,8 @@ export default function Packs() {
               } as React.CSSProperties
             }
           >
-            {p.badge && <div className="pack-badge"><Star size={13} /> {p.badge}</div>}
-            <div className="pack-emoji" style={{ color: p.accent }}><Ico size={26} /></div>
+            {p.badge && <div className="pack-badge">⭐ {p.badge}</div>}
+            <div className="pack-emoji">{p.emoji}</div>
             <h3 className="pack-name font-ui">{p.name}</h3>
             <div className="pack-price font-display">
               {p.price}
@@ -205,8 +192,7 @@ export default function Packs() {
               {p.cta}
             </a>
           </div>
-          );
-        })}
+        ))}
       </div>
 
       <style>{`
@@ -215,8 +201,6 @@ export default function Packs() {
         .eyebrow { display: inline-block; font-size: .74rem; font-weight: 700; letter-spacing: .12em;
           text-transform: uppercase; color: #4ade80; margin-bottom: 12px; }
         .sec-head h2 { font-weight: 500; font-size: clamp(2rem, 4.5vw, 3.3rem); letter-spacing: -.02em; }
-        .sec-title-icon { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
-        .sec-title-icon svg { color: #8B5CF6; flex-shrink: 0; }
         .sec-head p { color: #aeb8d0; margin-top: 14px; font-size: 1.02rem; }
 
         .packs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: stretch; }
@@ -228,11 +212,8 @@ export default function Packs() {
           box-shadow: 0 0 50px rgba(139,92,246,.18); background: rgba(139,92,246,.06); }
         .pack-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
           background: linear-gradient(100deg,#8B5CF6,#EC4899); color: #fff; font-family: 'Cabinet Grotesk', sans-serif;
-          font-size: .68rem; font-weight: 700; padding: 6px 16px; border-radius: 100px; white-space: nowrap;
-          display: inline-flex; align-items: center; gap: 5px; }
-        .pack-badge svg { color: #fff; }
-        .pack-emoji { width: 50px; height: 50px; border-radius: 13px; background: var(--accent-soft);
-          display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+          font-size: .68rem; font-weight: 700; padding: 6px 16px; border-radius: 100px; white-space: nowrap; }
+        .pack-emoji { font-size: 1.8rem; margin-bottom: 10px; }
         .pack-name { font-size: 1.15rem; font-weight: 600; color: #fff; margin-bottom: 10px; }
         .pack-price { font-weight: 700; font-size: 2.6rem; line-height: 1; color: #fff;
           display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }

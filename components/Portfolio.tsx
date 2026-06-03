@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { Palette } from "./icons";
 
 type Item = {
   name: string;
@@ -55,7 +54,7 @@ export default function Portfolio() {
     <section id="realisations" className="pf" ref={ref}>
       <div className="sec-head">
         <span className="eyebrow font-label">Réalisations</span>
-        <h2 className="font-display pf-title-h">Nos derniers projets <Palette size={28} /></h2>
+        <h2 className="font-display">Nos derniers projets 🎨</h2>
         <p>Des boutiques qui convertissent, des sites qui marquent. Cliquez pour explorer.</p>
       </div>
 
@@ -119,8 +118,6 @@ export default function Portfolio() {
 
       <style>{`
         .pf { max-width: 1280px; margin: 0 auto; padding: 100px 24px; }
-        .pf-title-h { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
-        .pf-title-h svg { color: #8B5CF6; flex-shrink: 0; }
         .pf .sec-head { text-align: center; margin-bottom: 56px; }
         .pf-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
         .pf-card { text-align: left; background: none; border: 0; padding: 0; display: flex; flex-direction: column; gap: 14px;

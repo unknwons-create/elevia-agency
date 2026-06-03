@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import { MessageCircle } from "./icons";
 
 const reviews = Array.from({ length: 8 }, (_, i) => `/images/reviews/avis-${i + 1}.jpg`);
 
@@ -29,7 +30,7 @@ export default function Reviews() {
     <section id="avis" className="rev" ref={ref}>
       <div className="rev-head sec-head">
         <span className="eyebrow font-label">Avis clients</span>
-        <h2 className="font-display">Des résultats, pas des promesses 💬</h2>
+        <h2 className="font-display rev-title">Des résultats, pas des promesses <MessageCircle size={28} /></h2>
         <p>Captures réelles de retours clients — résultats Shopify à l'appui. 100% authentiques.</p>
       </div>
 
@@ -40,7 +41,7 @@ export default function Reviews() {
             <div className="rev-card glass" key={src}>
               <Image
                 src={src}
-                alt={`Avis client Elevia Agency ${i + 1}`}
+                alt={`Avis client Target Agency ${i + 1}`}
                 width={420}
                 height={360}
                 sizes="(max-width:640px) 80vw, 340px"
@@ -53,6 +54,8 @@ export default function Reviews() {
 
       <style>{`
         .rev { padding: 100px 0; position: relative; }
+        .rev-title { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+        .rev-title svg { color: #4ade80; flex-shrink: 0; }
         .rev .sec-head { padding: 0 24px; }
         .rev-wrap { position: relative; max-width: 1280px; margin: 50px auto 0; padding: 0 24px; }
         .rev-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory;

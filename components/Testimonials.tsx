@@ -5,13 +5,13 @@ const testimonials = [
   {
     name: "Sophie M.",
     role: "Fondatrice — Aloha Bijoux",
-    text: "Elevia a transformé mon idée en une boutique qui dépasse toutes mes attentes. Le design est magnifique et les ventes ont décollé dès le lancement.",
+    text: "Target a transformé mon idée en une boutique qui dépasse toutes mes attentes. Le design est magnifique et les ventes ont décollé dès le lancement.",
     stars: 5,
   },
   {
     name: "Karim B.",
     role: "Entrepreneur e-commerce",
-    text: "Suivi impeccable, livraison rapide, résultat pro. Je recommande Elevia à tous ceux qui veulent se lancer sur Shopify sans se perdre.",
+    text: "Suivi impeccable, livraison rapide, résultat pro. Je recommande Target à tous ceux qui veulent se lancer sur Shopify sans se perdre.",
     stars: 5,
   },
   {

@@ -36,7 +36,7 @@ export default function MentionsLegales() {
           Éditeur du site
         </h2>
         <p>
-          Elevia Agency
+          Target Agency
           <br />
           Contact : elevia_agence (Instagram) / elevia_agency (Snapchat)
           <br />

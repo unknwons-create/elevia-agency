@@ -18,7 +18,7 @@ export default function Footer() {
     <footer className="ft">
       <div className="ft-in">
         <div className="ft-brand">
-          <Image src="/images/logo-white.png" alt="Elevia Agency" width={150} height={62} />
+          <Image src="/images/logo-target.png" alt="Target Agency" width={150} height={62} />
           <p>Sites e-commerce, vitrines & identité de marque clé en main. On crée des sites qui font décoller votre activité.</p>
         </div>
         <div className="ft-cols">
@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="ft-bottom">
-        <span>© {year} Elevia Agency. Tous droits réservés.</span>
+        <span>© {year} Target Agency. Tous droits réservés.</span>
         <a href="/mentions-legales">Mentions légales</a>
       </div>
       <style>{`

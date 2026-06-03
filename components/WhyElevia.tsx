@@ -1,32 +1,33 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { Gem, Handshake, Zap, TrendingUp, Sparkles } from "./icons";
 
 const pillars = [
   {
     color: "#8B5CF6",
     soft: "rgba(139,92,246,.12)",
-    emoji: "💎",
+    Icon: Gem,
     title: "Design premium",
     desc: "Des sites sur-mesure pensés pour convertir. Chaque détail reflète votre image de marque et inspire confiance.",
   },
   {
     color: "#22C55E",
     soft: "rgba(34,197,94,.12)",
-    emoji: "🤝",
+    Icon: Handshake,
     title: "Accompagnement",
     desc: "On ne vous livre pas qu'un site — on vous forme et on vous guide. Vidéo, e-book et suivi personnalisé inclus.",
   },
   {
     color: "#22D3EE",
     soft: "rgba(34,211,238,.12)",
-    emoji: "⚡",
+    Icon: Zap,
     title: "Réactivité",
     desc: "Délais rapides, communication fluide via WhatsApp. Vous êtes toujours informé de l'avancement de votre projet.",
   },
   {
     color: "#EC4899",
     soft: "rgba(236,72,153,.12)",
-    emoji: "📈",
+    Icon: TrendingUp,
     title: "Résultats",
     desc: "+200 clients, 97% satisfaits, 1M+€ générés. On crée des sites qui rapportent vraiment, pas juste de jolies vitrines.",
   },
@@ -64,21 +65,28 @@ export default function WhyElevia() {
     <section id="pourquoi" className="why" ref={ref}>
       <div className="sec-head">
         <span className="eyebrow font-label">Pourquoi nous</span>
-        <h2 className="font-display">Pourquoi choisir Elevia ? ✨</h2>
+        <h2 className="font-display sec-title-icon">
+          Pourquoi choisir Target ? <Sparkles size={28} />
+        </h2>
       </div>
       <div className="why-grid">
-        {pillars.map((p) => (
+        {pillars.map((p) => {
+          const Ico = p.Icon;
+          return (
           <div className="pillar" key={p.title}
             style={{ ["--c" as string]: p.color, ["--cs" as string]: p.soft } as React.CSSProperties}>
-            <div className="pillar-icon">{p.emoji}</div>
+            <div className="pillar-icon"><Ico size={26} /></div>
             <h3 className="font-ui">{p.title}</h3>
             <p>{p.desc}</p>
           </div>
-        ))}
+          );
+        })}
       </div>
       <style>{`
         .why { max-width: 1280px; margin: 0 auto; padding: 90px 24px; }
         .why .sec-head { text-align: center; margin-bottom: 56px; }
+        .sec-title-icon { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+        .sec-title-icon svg { color: #4ade80; flex-shrink: 0; }
         .why-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; }
         .pillar { padding: 34px 28px; border-radius: 20px; background: rgba(255,255,255,.03);
           border: 1px solid rgba(255,255,255,.08); transition: transform .25s ease, border-color .25s ease, background .25s ease; }
@@ -87,7 +95,7 @@ export default function WhyElevia() {
         .pillar.lit .pillar-icon { box-shadow: 0 0 24px var(--cs); }
         .pillar-icon { width: 56px; height: 56px; border-radius: 15px; background: var(--cs);
           border: 1px solid var(--c); display: flex; align-items: center; justify-content: center;
-          font-size: 1.6rem; margin-bottom: 20px; }
+          color: var(--c); margin-bottom: 20px; }
         .pillar h3 { font-size: 1.2rem; font-weight: 600; color: #fff; margin-bottom: 10px; }
         .pillar p { color: #aeb8d0; font-size: .92rem; line-height: 1.6; }
         @media (max-width: 1040px) { .why-grid { grid-template-columns: repeat(2,1fr); } }

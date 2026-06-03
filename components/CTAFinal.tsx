@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { Rocket } from "./icons";
 
 export default function CTAFinal() {
   const ref = useRef<HTMLElement>(null);
@@ -20,7 +21,7 @@ export default function CTAFinal() {
     <section className="ctaf" ref={ref}>
       <div className="mesh-bg" aria-hidden="true" />
       <div className="ctaf-in">
-        <span className="cta-item eyebrow font-label">Lancez-vous 🚀</span>
+        <span className="cta-item eyebrow font-label cta-eyebrow">Lancez-vous <Rocket size={15} /></span>
         <h2 className="cta-item font-display">
           Vous avez une idée <span className="grad-text" style={{ fontStyle: "italic" }}>de projet ?</span>
         </h2>
@@ -53,6 +54,8 @@ export default function CTAFinal() {
         .ctaf-in { position: relative; z-index: 2; max-width: 720px; margin: 0 auto; }
         .ctaf .eyebrow { display: inline-block; font-size: .74rem; font-weight: 700; letter-spacing: .12em;
           text-transform: uppercase; color: #4ade80; margin-bottom: 18px; }
+        .cta-eyebrow { display: inline-flex !important; align-items: center; gap: 7px; }
+        .cta-eyebrow svg { flex-shrink: 0; }
         .ctaf h2 { font-weight: 500; font-size: clamp(2.2rem,5.5vw,4rem); letter-spacing: -.02em; line-height: 1.08; margin-bottom: 18px; }
         .ctaf p { color: #aeb8d0; font-size: 1.08rem; margin-bottom: 42px; }
         .ctaf-main { margin-bottom: 36px; }

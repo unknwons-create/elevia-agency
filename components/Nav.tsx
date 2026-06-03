@@ -26,10 +26,10 @@ export default function Nav() {
   return (
     <header className="nav-root">
       <nav className={`nav-bar ${scrolled ? "scrolled" : ""}`}>
-        <a href="#hero" className="nav-logo" aria-label="Elevia Agency">
+        <a href="#hero" className="nav-logo" aria-label="Target Agency">
           <Image
-            src="/images/logo-white.png"
-            alt="Elevia Agency"
+            src="/images/logo-target.png"
+            alt="Target Agency"
             width={150}
             height={62}
             priority

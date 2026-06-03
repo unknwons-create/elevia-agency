@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { Rocket, Sparkles } from "./icons";
 
 const stats = [
   { value: "+200", label: "Clients accompagnés", grad: "linear-gradient(100deg,#60a5fa,#a78bfa)" },
@@ -39,7 +40,7 @@ export default function Hero() {
 
       <div className="hero-inner">
         <div className="hero-anim hero-badge font-label">
-          <span className="hero-dot" /> 🚀 Agence Web · Shopify & Sites Vitrines
+          <span className="hero-dot" /> <Rocket size={14} /> Agence Web · Shopify & Sites Vitrines
         </div>
 
         <h1 className="hero-anim hero-title font-display">
@@ -58,7 +59,7 @@ export default function Hero() {
         </p>
 
         <div className="hero-anim hero-cta">
-          <a href="#packs" className="btn-grad">Voir nos packs ✨</a>
+          <a href="#packs" className="btn-grad">Voir nos packs <Sparkles size={17} /></a>
           <a href="https://wa.me/33688740242" target="_blank" rel="noopener noreferrer" className="btn-wa">
             <WhatsAppIcon /> WhatsApp
           </a>
@@ -99,7 +100,10 @@ export default function Hero() {
         .hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 64px; }
         .btn-grad { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1rem; color: #fff;
           background: linear-gradient(100deg,#3B82F6,#8B5CF6); padding: 16px 34px; border-radius: 12px;
-          text-decoration: none; box-shadow: 0 8px 40px rgba(99,102,241,.4); transition: transform .2s ease, box-shadow .2s ease; }
+          text-decoration: none; box-shadow: 0 8px 40px rgba(99,102,241,.4); transition: transform .2s ease, box-shadow .2s ease;
+          display: inline-flex; align-items: center; gap: 8px; }
+        .btn-grad svg { flex-shrink: 0; }
+        .hero-badge svg { flex-shrink: 0; }
         .btn-grad:hover { transform: translateY(-3px); box-shadow: 0 14px 50px rgba(99,102,241,.6); }
         .btn-wa { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: 'Space Grotesk', sans-serif;
           font-weight: 600; font-size: 1rem; color: #fff; background: #25D366; padding: 16px 30px;

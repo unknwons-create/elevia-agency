@@ -4,25 +4,25 @@ import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://elevia-agence.com"),
-  title: "Elevia Agency — Sites Shopify, vitrines & image de marque | Dès 170€",
+  title: "Target Agency — Sites Shopify, vitrines & image de marque | Dès 170€",
   description:
     "Agence web : boutiques Shopify, sites vitrines et identité de marque clé en main. +200 clients accompagnés, 97% satisfaits, 1M+€ générés. Packs dès 170€.",
   keywords: [
     "agence shopify",
     "création site ecommerce",
     "boutique shopify france",
-    "elevia agency",
+    "target agency",
     "création site vitrine",
     "identité visuelle",
     "image de marque",
     "site web professionnel",
   ],
   openGraph: {
-    title: "Elevia Agency — Sites Shopify, vitrines & image de marque",
+    title: "Target Agency — Sites Shopify, vitrines & image de marque",
     description:
       "Boutiques Shopify, sites vitrines & branding clé en main. +200 clients, 97% satisfaits, 1M+€ générés.",
     url: "https://elevia-agence.com",
-    siteName: "Elevia Agency",
+    siteName: "Target Agency",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
     locale: "fr_FR",
     type: "website",
@@ -46,9 +46,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Elevia Agency",
+              name: "Target Agency",
               url: "https://elevia-agence.com",
-              logo: "https://elevia-agence.com/images/logo-white.png",
+              logo: "https://elevia-agence.com/images/logo-target.png",
               description:
                 "Agence web spécialisée en boutiques Shopify, sites vitrines et identité de marque clé en main.",
               contactPoint: {

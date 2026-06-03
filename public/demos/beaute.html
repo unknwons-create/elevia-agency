@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Belle Éclat — Institut de beauté</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Nunito+Sans:wght@300;400;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito Sans',sans-serif;background:#fbf6f2;color:#3d2e2a}
+a{color:inherit;text-decoration:none}
+.serif{font-family:'Playfair Display',serif}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 7%}
+.brand{font-family:'Playfair Display',serif;font-size:1.6rem;color:#b76e79}
+.links{display:flex;gap:30px;font-size:.9rem;color:#6b5650}
+.cta{background:#b76e79;color:#fff;padding:11px 24px;border-radius:30px;font-size:.85rem}
+.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:50px 7% 90px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4.4rem);line-height:1.1;margin-bottom:20px}
+.hero h1 em{color:#b76e79}
+.hero p{color:#6b5650;font-size:1.05rem;line-height:1.8;max-width:430px;margin-bottom:30px}
+.btns{display:flex;gap:14px}
+.ghost{border:1px solid #d8b8bd;color:#b76e79;padding:13px 26px;border-radius:30px;font-size:.9rem}
+.hero-img{height:480px;border-radius:200px 200px 24px 24px;background:url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=900&q=80') center/cover}
+.serv{background:#fff;padding:90px 7%;text-align:center}
+.serv h2{font-family:'Playfair Display',serif;font-size:2.6rem;margin-bottom:50px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:1000px;margin:0 auto}
+.card{background:#fbf6f2;border-radius:20px;padding:38px 26px}
+.ic{width:60px;height:60px;border-radius:50%;background:#f3e0e3;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin:0 auto 18px}
+.card h3{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:10px}
+.card p{font-size:.9rem;color:#6b5650;line-height:1.6;margin-bottom:14px}
+.card .pr{color:#b76e79;font-weight:600}
+footer{background:#3d2e2a;color:#e8d8d4;padding:44px 7%;text-align:center;font-size:.86rem}
+@media(max-width:820px){.links,.cta{display:none}.hero{grid-template-columns:1fr}.hero-img{height:320px;border-radius:24px}.grid{grid-template-columns:1fr}}
+</style></head><body>
+<nav><div class="brand">Belle Éclat</div><div class="links"><a>Soins</a><a>Tarifs</a><a>Équipe</a><a>Contact</a></div><a class="cta">Réserver</a></nav>
+<header class="hero">
+<div><h1 class="serif">Révélez votre <em>éclat</em> naturel.</h1><p>Institut de beauté & spa au cœur de la ville. Soins du visage, massages et rituels bien-être pour vous reconnecter à vous-même.</p><div class="btns"><a class="cta">Prendre RDV</a><a class="ghost">Nos soins</a></div></div>
+<div class="hero-img"></div>
+</header>
+<section class="serv"><h2 class="serif">Nos soins signature</h2>
+<div class="grid">
+<div class="card"><div class="ic">🌸</div><h3 class="serif">Soin Hydra-Glow</h3><p>Nettoyage profond, gommage doux et masque hydratant pour une peau lumineuse.</p><span class="pr">dès 65€</span></div>
+<div class="card"><div class="ic">💆‍♀️</div><h3 class="serif">Massage Relaxant</h3><p>60 minutes d'évasion aux huiles essentielles pour relâcher toutes les tensions.</p><span class="pr">dès 80€</span></div>
+<div class="card"><div class="ic">✨</div><h3 class="serif">Rituel Anti-Âge</h3><p>Protocole liftant et raffermissant pour une peau visiblement rajeunie.</p><span class="pr">dès 95€</span></div>
+</div></section>
+<section class="hero" style="padding-top:90px">
+<div class="hero-img" style="height:430px;border-radius:24px 24px 200px 200px;background:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=900&q=80') center/cover"></div>
+<div><h1 class="serif" style="font-size:clamp(2.2rem,4.5vw,3.6rem)">Un cocon de <em>bien-être</em></h1><p>Dans un cadre apaisant, nos esthéticiennes diplômées prennent soin de vous avec des produits naturels et des gestes experts. Une parenthèse rien que pour vous.</p>
+<div class="btns"><a class="cta">Découvrir l'institut</a></div></div>
+</section>
+<section style="background:#fbf6f2;padding:90px 7%;text-align:center">
+<h2 class="serif" style="font-size:2.6rem;margin-bottom:46px">Nos clientes témoignent</h2>
+<div class="grid">
+<div class="card" style="background:#fff"><div class="ic">💗</div><p style="font-size:.95rem;color:#6b5650;line-height:1.7;margin-bottom:14px">« Un moment de pure détente. Ma peau n'a jamais été aussi belle ! »</p><b class="serif" style="color:#b76e79">Émilie</b></div>
+<div class="card" style="background:#fff"><div class="ic">🌷</div><p style="font-size:.95rem;color:#6b5650;line-height:1.7;margin-bottom:14px">« Accueil chaleureux, soins de grande qualité. Je recommande vivement. »</p><b class="serif" style="color:#b76e79">Nadia</b></div>
+<div class="card" style="background:#fff"><div class="ic">✨</div><p style="font-size:.95rem;color:#6b5650;line-height:1.7;margin-bottom:14px">« Mon institut préféré. On en ressort apaisée et rayonnante. »</p><b class="serif" style="color:#b76e79">Clara</b></div>
+</div>
+</section>
+<section style="padding:90px 7%;text-align:center;background:#b76e79;color:#fff">
+<h2 class="serif" style="font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:16px">Offrez-vous une pause</h2>
+<p style="max-width:440px;margin:0 auto 30px;opacity:.9">Réservez votre soin en ligne en quelques clics. Carte cadeau disponible.</p>
+<a style="background:#fff;color:#b76e79;padding:14px 34px;border-radius:30px;font-weight:600;display:inline-block">Réserver un soin</a>
+</section>
+<footer>© 2025 Belle Éclat · Institut de beauté & spa · Réalisé par Elevia Agency</footer>
+</body></html>

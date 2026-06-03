@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maison Lumière — Restaurant gastronomique</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Jost',sans-serif;background:#13100c;color:#f3ece0}
+a{color:inherit;text-decoration:none}
+.serif{font-family:'Cormorant Garamond',serif}
+nav{display:flex;justify-content:space-between;align-items:center;padding:26px 7%;position:absolute;width:100%;z-index:5}
+.brand{font-family:'Cormorant Garamond',serif;font-size:1.7rem;letter-spacing:.04em}
+.brand span{color:#c9a24b}
+.links{display:flex;gap:34px;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase}
+.links a{opacity:.8}
+.book{border:1px solid #c9a24b;color:#c9a24b;padding:10px 22px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase}
+.hero{height:100vh;min-height:620px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+  background:linear-gradient(rgba(19,16,12,.55),rgba(19,16,12,.85)),url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80') center/cover}
+.eyebrow{letter-spacing:.4em;text-transform:uppercase;font-size:.72rem;color:#c9a24b;margin-bottom:26px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,8vw,6.5rem);font-weight:600;line-height:1;margin-bottom:24px}
+.hero p{max-width:520px;font-weight:300;opacity:.85;font-size:1.05rem;line-height:1.7;margin-bottom:38px}
+.cta{background:#c9a24b;color:#13100c;padding:16px 40px;letter-spacing:.18em;text-transform:uppercase;font-size:.76rem}
+.sec{padding:110px 7%;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.sec img{width:100%;border-radius:4px;height:430px;object-fit:cover}
+.sec h2{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;margin-bottom:22px;line-height:1.1}
+.sec p{font-weight:300;opacity:.82;line-height:1.9;margin-bottom:18px}
+.menu{background:#0d0b08;padding:110px 7%;text-align:center}
+.menu h2{font-family:'Cormorant Garamond',serif;font-size:3rem;margin-bottom:60px}
+.dishes{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:30px}
+.dish{display:flex;justify-content:space-between;border-bottom:1px solid rgba(201,162,75,.2);padding-bottom:20px;text-align:left}
+.dish .n{font-family:'Cormorant Garamond',serif;font-size:1.5rem}
+.dish .d{font-weight:300;font-size:.86rem;opacity:.6;max-width:380px;margin-top:6px}
+.dish .p{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:#c9a24b}
+footer{padding:50px 7%;text-align:center;border-top:1px solid rgba(201,162,75,.15);font-weight:300;font-size:.84rem;opacity:.6}
+@media(max-width:760px){.links,.book{display:none}.sec{grid-template-columns:1fr;gap:34px;padding:70px 7%}.sec img{height:280px}}
+</style></head><body>
+<nav><div class="brand">Maison <span>Lumière</span></div>
+<div class="links"><a>Maison</a><a>Carte</a><a>Cave</a><a>Réserver</a></div>
+<a class="book">Réserver</a></nav>
+<header class="hero">
+<div class="eyebrow">Cuisine française · Étoilé 2025</div>
+<h1 class="serif">L'art du goût,<br>sublimé.</h1>
+<p>Une expérience gastronomique d'exception au cœur de Paris, où chaque assiette raconte une histoire.</p>
+<a class="cta">Réserver une table</a>
+</header>
+<section class="sec">
+<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900&q=80" alt="chef">
+<div><h2 class="serif">Une cuisine signée<br>par la passion</h2>
+<p>Notre chef étoilé compose une carte vivante au rythme des saisons, sublimant les produits du terroir français avec une créativité sans limite.</p>
+<p>Chaque plat est une rencontre entre tradition et modernité, pensée pour éveiller tous vos sens.</p></div>
+</section>
+<section class="menu">
+<h2 class="serif">Notre carte</h2>
+<div class="dishes">
+<div class="dish"><div><div class="n">Saint-Jacques snackées</div><div class="d">Purée de panais, beurre noisette, caviar d'Aquitaine</div></div><div class="p">32€</div></div>
+<div class="dish"><div><div class="n">Filet de bœuf Rossini</div><div class="d">Foie gras poêlé, sauce truffe, pommes fondantes</div></div><div class="p">48€</div></div>
+<div class="dish"><div><div class="n">Soufflé au Grand Marnier</div><div class="d">Glace vanille de Madagascar, tuile dentelle</div></div><div class="p">18€</div></div>
+</div>
+</section>
+<section class="sec" style="background:#0d0b08">
+<div><h2 class="serif">Une cave d'exception</h2>
+<p>Plus de 400 références sélectionnées par notre sommelier. Des grands crus aux pépites de vignerons indépendants, chaque bouteille est choisie pour sublimer votre repas.</p>
+<p>Laissez-vous guider par un accord mets & vins sur-mesure, pensé pour chaque plat de la carte.</p></div>
+<img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=900&q=80" alt="cave à vin">
+</section>
+<section class="menu" style="background:#13100c">
+<h2 class="serif">Ils ont vécu l'expérience</h2>
+<div class="dishes" style="gap:26px">
+<div class="dish"><div><div class="d" style="font-size:1.05rem;color:#f3ece0;max-width:560px">« Une soirée inoubliable, chaque plat était une œuvre d'art. Le service est d'une élégance rare. »</div><div class="d" style="margin-top:10px;color:#c9a24b">— Camille R.</div></div></div>
+<div class="dish"><div><div class="d" style="font-size:1.05rem;color:#f3ece0;max-width:560px">« La meilleure table de Paris. L'accord mets & vins était tout simplement parfait. »</div><div class="d" style="margin-top:10px;color:#c9a24b">— Thomas L.</div></div></div>
+<div class="dish" style="border-bottom:0"><div><div class="d" style="font-size:1.05rem;color:#f3ece0;max-width:560px">« Un cadre somptueux, une cuisine d'exception. On reviendra, c'est certain. »</div><div class="d" style="margin-top:10px;color:#c9a24b">— Sofia M.</div></div></div>
+</div>
+</section>
+<section style="padding:110px 7%;text-align:center;background:linear-gradient(rgba(19,16,12,.6),rgba(19,16,12,.85)),url('https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=1500&q=80') center/cover">
+<h2 class="serif" style="font-size:clamp(2.4rem,6vw,4rem);margin-bottom:22px">Réservez votre table</h2>
+<p style="font-weight:300;opacity:.85;max-width:480px;margin:0 auto 34px">Ouvert du mardi au samedi, de 19h à 23h. Réservation conseillée.</p>
+<a class="cta">Réserver maintenant</a>
+</section>
+<footer>© 2025 Maison Lumière · 12 rue de Rivoli, Paris · Réalisé par Elevia Agency</footer>
+</body></html>
